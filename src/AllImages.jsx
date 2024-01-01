@@ -82,6 +82,21 @@ const AllImages = () => {
   ];
 
   return (
+   <div> 
+    <div className="flex w-full h-12 items-center">
+      <button>
+           All Images
+      </button>
+      <button>
+           Categories
+      </button>
+      <button>
+           Favourites
+      </button>
+      <button>
+           Add Image
+      </button>
+    </div>
     <div className=" bg-black w-full max-w-full p-4 lg:columns-4 md:columns-3 sm:columns-1 ">
       {data.map((item, index) => {
         return (
@@ -92,8 +107,7 @@ const AllImages = () => {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                   src={item.src}
                   alt={item.index}
-                />
-              </div>
+                />              </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
               <div className="absolute inset-0 flex translate-y-[45%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                 <h1 className="font-dmserif text-1xl font-bold text-white">
@@ -109,6 +123,7 @@ const AllImages = () => {
         );
       })}
     </div>
+  </div>  
   );
 };
 
